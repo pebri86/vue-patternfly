@@ -27,52 +27,52 @@
 </template>
 
 <script>
-import { Portal } from "portal-vue";
+import {Portal} from 'portal-vue';
 
 export default {
-  name: "pf-modal",
+  name: 'pf-modal',
 
   components: {
-    Portal
+    Portal,
   },
 
   props: {
     title: String,
     confirmButton: {
       type: String,
-      default: "OK"
+      default: 'OK',
     },
     cancelButton: {
       type: String,
-      default: "Cancel"
+      default: 'Cancel',
     },
     outsideClose: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
 
   methods: {
     confirm() {
-      this.$emit("confirm");
+      this.$emit('confirm');
       this.close();
     },
 
     cancel() {
-      this.$emit("cancel");
+      this.$emit('cancel');
       this.close();
     },
 
     close() {
-      this.$emit("close");
+      this.$emit('close');
     },
 
     clickOutside() {
       if (this.outsideClose) {
         this.cancel();
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

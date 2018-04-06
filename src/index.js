@@ -1,10 +1,10 @@
-import "./index.css";
-import { version } from "../package.json";
+import './index.css';
+import {version} from '../package.json';
 
-import * as components from "./components";
-import * as directives from "./directives";
+import * as components from './components';
+import * as directives from './directives';
 
-import VueStrap from "./vue-strap";
+import VueStrap from './vue-strap';
 
 const VuePatternfly = {
   version,
@@ -19,11 +19,11 @@ const VuePatternfly = {
       Vue.directive(directive.name || name, directive);
     }
     VueStrap.install(Vue);
-  }
+  },
 };
 
 export default VuePatternfly;
 
-if (typeof window !== "undefined" && window.Vue) {
+if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(VuePatternfly);
 }
