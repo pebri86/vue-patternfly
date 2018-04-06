@@ -1,4 +1,4 @@
-<template>
+<template functional>
   <portal-target name="modals-target" :transition="{name: 'drop-fade'}" multiple/>
 </template>
 
@@ -23,7 +23,6 @@
 }
 </style>
 
-
 <script>
 import {PortalTarget} from 'portal-vue';
 
@@ -32,14 +31,6 @@ export default {
 
   components: {
     PortalTarget,
-  },
-
-  mounted() {
-    document.documentElement.classList.add('modal-open');
-  },
-
-  beforeDestroy() {
-    document.documentElement.classList.remove('modal-open');
   },
 };
 </script>

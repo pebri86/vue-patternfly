@@ -15,7 +15,7 @@
           <div class="modal-footer" v-if="$slots.footer || $scopedSlots.footer || cancelButton || confirmButton">
             <slot name="footer">
               <button type="button" class="btn btn-default" v-if="cancelButton" @click="cancel">{{cancelButton}}</button>
-              <button type="button" class="btn btn-primary" v-if="confirmButton" @click="cancel">{{confirmButton}}</button>
+              <button type="button" class="btn btn-primary" v-if="confirmButton" @click="confirm">{{confirmButton}}</button>
             </slot>
           </div>
         </div>
@@ -50,6 +50,14 @@ export default {
       type: Boolean,
       default: false,
     },
+  },
+
+  mounted() {
+    document.documentElement.classList.add('modal-open');
+  },
+
+  beforeDestroy() {
+    document.documentElement.classList.remove('modal-open');
   },
 
   methods: {
