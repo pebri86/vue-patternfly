@@ -58,13 +58,21 @@
       'hidden-icons-pf': !disabled && !icons,
     }">
     <slot></slot>
+
+    <modals-target/>
   </div>
 </div>
 </template>
 
 <script>
+import ModalsTarget from './ModalsTarget.vue';
+
 export default {
   name: 'pf-layout',
+
+  components: {
+    ModalsTarget,
+  },
 
   props: {
     icons: {
@@ -122,7 +130,7 @@ export default {
     },
 
     tablet() {
-      return 1200 > this.width >= 768;
+      return this.width < 1200 && this.width >= 768;
     },
 
     mobile() {

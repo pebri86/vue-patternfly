@@ -5,14 +5,18 @@ All notable changes to this project will be documented in this file.
 ### Added
 - Implemented secondary and tertiary vertical navigation.
 - Implemented grid layout on `pf-layout`.
+- Implemented modal overlay pattern with `pf-modal` (Contributed by [@pebri86]).
+- Implemented `pf-list-view` (Contributed by [@pebri86]).
+- Upgraded build to webpack 4.
 
 # Changed
-- **BACKWARD INCOMPATIBLE CHANGE**: The `flex` property of `pf-layout` has been removed. The same layout can be applied using the `flex` value on the new `display`.
+- **BACKWARD INCOMPATIBLE CHANGE**: The `flex` property of `pf-layout` has been removed. The same layout can be applied using the `flex` value on the new `display` property.
 
 ### Fixed
 - Fixed issue with dropdown filters by removing vue-strap's select and option components.
 - Fixed offset of `pf-application-launcher`.
 - Fixed href property of `pf-launcher-item`s.
+- Fixed various linting errors/warnings.
 
 ## [0.0.13]
 ### Added
@@ -160,3 +164,5 @@ disabled, as per PatternFly design guidelines.
 [0.0.4]: https://github.com/mtorromeo/vue-patternfly/compare/v0.0.3...v0.0.4
 [0.0.3]: https://github.com/mtorromeo/vue-patternfly/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/mtorromeo/vue-patternfly/compare/v0.0.1...v0.0.2
+
+[@pebri86]: https://github.com/pebri86
