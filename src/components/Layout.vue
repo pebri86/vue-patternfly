@@ -18,7 +18,7 @@
     </div>
 
     <div class="collapse navbar-collapse navbar-collapse-1">
-      <ul v-if="horizontal" class="nav navbar-nav navbar-primary">
+      <ul v-if="horizontal" class="nav navbar-nav navbar-primary" :class="{'persistent-secondary': horizontal}">
         <slot name="horizontal-menu"></slot>
       </ul>
 
